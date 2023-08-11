@@ -48,12 +48,11 @@ Before you begin, ensure you have the following:
    ```sh
    ./gradlew build
 	 ```
+3. Run the microservice
 
-### Run the microservice
-
-```sh
-./gradlew bootRun
-```
+    ```sh
+    ./gradlew bootRun
+          ```
 
 #### The microservice will be accessible at `localhost:8080`.
 
