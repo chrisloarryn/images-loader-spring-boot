@@ -1,0 +1,18 @@
+version: '3.7'
+
+#include:
+#  - path: ./gcs/docker-compose.yaml
+  
+services:
+  gcs: 
+    build:
+      context: .
+      dockerfile: ./gcs/Dockerfile
+    container_name: gcs
+  uploader:
+    build:
+        context: .
+        dockerfile: ./uploader/Dockerfile
+    depends_on:
+      - gcs
+  

@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  gcs: 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gcs
