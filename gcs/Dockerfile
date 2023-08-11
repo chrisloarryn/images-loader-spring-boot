@@ -16,7 +16,7 @@ RUN mkdir gcs-folder
 WORKDIR /app/gcs-folder
 
 # clone repo containing the go code for gcs (https://github.com/fsouza/fake-gcs-server)
-RUN git clone https://github.com/fsouza/fake-gcs-server .
+RUN git clone -u https://github.com/fsouza/fake-gcs-server .
 
 ## download dependencies and make vendor folder
 RUN go mod download
@@ -44,4 +44,3 @@ COPY --from=build /app/gcs-folder/build/bin/gcs-service /app/gcs-folder/
 EXPOSE 8080
 
 ENTRYPOINT [ "/app/gcs-folder/gcs-service" ]
-#ENTRYPOINT [ "/app/cl-sipos-bff" ][]
