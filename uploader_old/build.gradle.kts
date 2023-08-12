@@ -41,9 +41,13 @@ dependencyManagement {
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs += "-Xjsr305=strict"
-		// jvmTarget = "20"
-		jvmTarget = "1.8"
+		jvmTarget = "20"
+		// jvmTarget = "1.8"
 	}
+
+	// kotlinOptions {
+  //  jvmTarget = "1.8" // or another valid version like "11"
+	// }
 }
 
 tasks.withType<Test> {
